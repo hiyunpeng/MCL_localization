@@ -21,7 +21,6 @@ To use the custom Particle Filter implementation:
    cp pf_localisation/pf.py <path-to-socspioneer-package>/src/
 
 2. Rebuild the socspioneer package:
-
   ```bash
   cd <path-to-socspioneer-package>
   colcon build
