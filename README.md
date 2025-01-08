@@ -1,31 +1,28 @@
-# MCL_localization
+# Particle Filter Localisation (MCL) with ROS 2
 
-This package implements the particle filter localization using sensor and motion updates from the Pioneer P3-DX robot. To complete this task, you need to make changes in specific files as outlined below.
+This repository contains an implementation of the Particle Filter (Monte Carlo Localisation, MCL) algorithm for robot localisation. It is designed to work with the **socspioneer** package and includes features such as motion updates, sensor updates, resampling, and handling the "kidnapped robot" problem.
 
-The main file to work on is located at `src/pf_localisation/pf.py`. Ensure you follow the assignment lab notes for detailed instructions on how to complete the methods. Additional documentation about each method can be found in the source files.
+---
 
-### Important Notes
+## Getting Started
 
-- **File Changes:**  
-  All changes should be made **only in `pf.py`**. This file contains the methods required to complete the localization package.
-  - **Inherited Parameters:** If you need to adjust inherited parameters from the `PFLocaliserBase` class, do this directly in the `PFLocaliser` class in `pf.py`.
-  
-- **Experimentation:**  
-  You can experiment with various parameter values in other files, such as `sensor_model.py`, to observe different behaviors and results.
+### Clone this repository:
+```bash
+git clone https://github.com/catherine2103/pf_localisation.git
+cd pf_localisation
+```
 
-### Building the Package
+### Setup
 
-Follow these steps to build the package:
+To use the custom Particle Filter implementation:
 
-1. **Move Package:**  
-   Move the package to your Colcon workspace, typically the `src` directory.
+1. Replace the `pf.py` file in the `socspioneer` package with the provided file from this repository:
+   ```bash
+   cp pf_localisation/pf.py <path-to-socspioneer-package>/src/
 
-2. **Rebuild Workspace:**  
-   Rebuild the Colcon workspace to integrate any changes.
+2. Rebuild the socspioneer package:
 
-\`\`\`bash
-colcon build --packages-select <package_name>
-\`\`\`
-
-> Note: Replace `<package_name>` with the actual name of your package if specified.
-"""
+  ```bash
+  cd <path-to-socspioneer-package>
+  colcon build
+  source install/setup.bash
