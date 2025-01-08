@@ -7,10 +7,10 @@ This repository contains an implementation of the Particle Filter (Monte Carlo L
 ## Getting Started
 
 ### Clone this repository:
-```bash
-git clone https://github.com/catherine2103/pf_localisation.git
-cd pf_localisation
-```
+   ```bash
+   git clone https://github.com/catherine2103/pf_localisation.git
+   cd pf_localisation
+   ```
 
 ### Setup
 
@@ -21,7 +21,8 @@ To use the custom Particle Filter implementation:
    cp pf_localisation/pf.py <path-to-socspioneer-package>/src/
 
 2. Rebuild the socspioneer package:
-  ```bash
-  cd <path-to-socspioneer-package>
-  colcon build
-  source install/setup.bash
+   ```bash
+   cd <path-to-socspioneer-package>
+   colcon build
+   source install/setup.bash
+   ```
